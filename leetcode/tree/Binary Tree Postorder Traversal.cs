@@ -1,6 +1,6 @@
-var solution = new _145_Binary_Tree_Postorder_Traversal();
-var result = solution.PostorderTraversal(new TreeNode(1) {right = new TreeNode(2) {left = new TreeNode(3)}});
-Console.WriteLine(string.Join(", ", result));
+// var solution = new _145_Binary_Tree_Postorder_Traversal();
+// var result = solution.PostorderTraversal(new TreeNode(1) {right = new TreeNode(2) {left = new TreeNode(3)}});
+// Console.WriteLine(string.Join(", ", result));
 
 public class _145_Binary_Tree_Postorder_Traversal {
     public IList<int> PostorderTraversal(TreeNode root) {
@@ -10,7 +10,7 @@ public class _145_Binary_Tree_Postorder_Traversal {
         return result;
     }
 
-    void DFS(TreeNode node, List<int> result) {
+    void DFS(TreeNode? node, List<int> result) {
         if (node == null) {
             return;
         }
