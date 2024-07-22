@@ -1,10 +1,12 @@
-﻿var s = new _20_Valid_Parentheses();
-Console.WriteLine(s.IsValid("()")); // true
-Console.WriteLine(s.IsValid("()[]{}")); // true
-Console.WriteLine(s.IsValid("(]")); // false
+﻿// var s = new _20_Valid_Parentheses();
+// Console.WriteLine(s.IsValid("()")); // true
+// Console.WriteLine(s.IsValid("()[]{}")); // true
+// Console.WriteLine(s.IsValid("(]")); // false
 
-public class _20_Valid_Parentheses {
-    public bool IsValid(string s) {
+public class _20_Valid_Parentheses
+{
+    public bool IsValid(string s)
+    {
         var stack = new Stack<char>();
         var mapping = new Dictionary<char, char> {
             {')', '('},
@@ -12,15 +14,22 @@ public class _20_Valid_Parentheses {
             {'}', '{'}
         };
 
-        foreach (char c in s) {
+        foreach (char c in s)
+        {
             // If the current character is a closing bracket
-            if (mapping.ContainsKey(c)) {
-                if (stack.Count > 0 && stack.Peek() == mapping[c]) {
+            if (mapping.ContainsKey(c))
+            {
+                if (stack.Count > 0 && stack.Peek() == mapping[c])
+                {
                     stack.Pop();
-                } else {
+                }
+                else
+                {
                     return false;
                 }
-            } else {
+            }
+            else
+            {
                 stack.Push(c);
             }
         }
