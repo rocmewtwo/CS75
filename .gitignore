@@ -1,3 +1,5 @@
 leetcode/bin/*
 leetcode/obj/*
+leetcode.Tests/obj/*
+leetcode.Tests/bin/*
 .DS_Store
